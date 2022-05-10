@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h2 태그에 글자색은 빨강 배경색은 노랑! */
+        h2 {
+            color: red;
+            background-color: yellow;
+        }
+
+        /* 특정 아이디에 스타일 지정 */
+        #id1 {
+            color: blueviolet;
+            background-color: aqua;
+
+        
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="id1">자나깨나 불조심 꺼진불도 다시보자</h2>
+    <button onclick="changeColor()"> 글자색 바꾸기</button>
+    <button onclick="disappear()"> 사라져띠</button>
+    <button onclick="appear()"> 나타나띠</button>
+
+    <script>
+        function changeColor(){
+        document.getElementById("id1").style.color = "black";         
+        }
+
+        function disappear(){
+           const a =  document.getElementById("id1");
+           a.style.visibility = "hidden";
+
+       
+        }
+        function appear(){
+            document.getElementById("id1").style.visibility ="visible";
+
+        }
+
+      
+
+        // const changeColor = () => {
+            
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 바디 - 점수입력을 위한 인풋 계산함수 버튼 출력 div
+js - 입력받은 점수로 학점 판단
+90 80 80 a b f~ 로 성적
+div에 A 또는 B 출력
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+점수 입력란 : <input type="text" id="score">
+<br>
+학점 호출 버튼 : <button onclick="result()"> 버튼</button>
+<div id="resultView">
+
+</div>
+
+    
+</body>
+<script>
+    function result(){
+        let a = document.getElementById("score").value;
+        let b = "";
+        if( a >= 90){
+            b = 'A'
+        }else if(a >= 80){
+            b = 'B'
+        }else{
+            b = "F"
+        }
+        document.getElementById("resultView").innerHTML = b
+    }
+
+
+</script>
+</html>

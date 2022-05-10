@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input 태그를 블록 요소로 지정 */
+        input {
+            display: block;
+        }
+
+        username {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>라이브 개꿀~</h1>
+    아이디 : <input type="text" id="username" value="user1">
+    <!-- 버튼을 클릭했을 때 fun1 이라는 함수 호출 -->
+    <button onclick="fun1()">아이디입력완료</button>
+    <br>
+    비밀번호 : <input type="password" id="password">
+    비밀번호 입력값 확인 <input type="text" id="password-check">
+    <button onclick="fun2()">비밀번호체크</button>
+    <!-- 위 버튼 클릭시 fun2 함수를 호출하고 비밀번호 입력값확인 칸에 비밀번호에서 입력한 값을 출력하기 -->
+    <H1>안녕</H1>
+    <H2>반가워요</H2>
+</body>
+<script>
+    //fun1() 함수 선언
+    function fun1() {
+        console.log("fun1 호출됨");
+        //아이디에 입력한 값을 가져오기
+        console.log(document.getElementById("username").value);
+        const usernameTag = document.getElementById("username");
+        console.log(usernameTag)
+        const usernameTagValue = document.getElementById("username").value;
+        console.log(usernameTagValue)
+        console.log(usernameTag.value)
+       }
+
+       function fun2(){
+        document.getElementById("password-check").value =   document.getElementById("password").value
+       }
+
+    console.log(document);
+    // // id = username 인 요소를 js로 가져옴
+    console.log(document.getElementById("username"));
+    // // value 값을 출력
+    // console.log(document.getElementById("username").value);
+    // //querySelector(): 태그
+    // console.log(document.querySelector("input"));
+    // console.log(document.querySelectorAll("input"));
+    // //querySelector(): 특정아이디
+    // console.log(document.querySelector("#username"));
+
+
+</script>
+
+</html>

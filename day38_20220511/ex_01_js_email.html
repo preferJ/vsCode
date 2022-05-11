@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="email-1">@ <input type="text" id="email-2">
+    <select name="" id="em" onchange="em()">
+        <option value="gmail.com">지메일</option>
+        <option value="naver.com">네이버</option>
+        <option value="daum.net">다음</option>
+        <option value="yahoo.com">야후</option>
+    </select>
+
+    <script>
+
+function em(){
+document.getElementById("email-2").value = document.getElementById("em").value
+}
+
+    </script>
+
+</body>
+
+</html>

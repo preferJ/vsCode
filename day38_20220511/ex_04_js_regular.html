@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    input{
+        display: block;
+    }
+</style>
+
+</head>
+
+
+<body>
+<!-- 정규식 표현(Regular Expression) -->
+<!-- 정규식은 js 에서 /^ '정규식 내용' $/     으로 사용함-->
+<!-- 
+    1. 영문만 5~10글자
+ -->
+<input type="text" id="id1" onblur="id1()">
+<input type="text" id="id2" onblur="id2()">
+<p id="id1-result"></p>
+
+<script>
+    function id1(){
+        const id1 = document.getElementById("id1").value;
+        const exp = /^[a-z]{5,10}$/;
+        if(id1.match(exp)){
+            console.log("일치")
+        }else{
+            console.log("불일치")
+        }
+    }
+
+    function id2(){
+        const id1 = document.getElementById("id1").value;
+        const exp = /^(?=.*[a-z])[a-z\d]{5,10}$/;
+        if(id1.match(exp)){
+            console.log("일치")
+        }else{
+            console.log("불일치")
+        }
+    }
+// 영소문 필 , 숫 필 영대 필 5 - 10
+    function id3(){
+        const id1 = document.getElementById("id1").value;
+        const exp = /^(?=.*[a-z])(?=.*\d)(?=.*[A-Z])[a-z\d]{5,10}$/;
+        if(id1.match(exp)){
+            console.log("일치")
+        }else{
+            console.log("불일치")
+        }
+    }
+// 영소문 필 , 숫 필 영대 필 5 - 10 + 특문 필수 (, - _ ! #) 만 가능
+    function id3(){
+        const id1 = document.getElementById("id1").value;
+        const exp = /^(?=.*[a-z])(?=.*\d)(?=.*[A-Z])[a-z\d](?=.*[,-_!#]){5,10}$/;
+        if(id1.match(exp)){
+            console.log("일치")
+        }else{
+            console.log("불일치")
+        }
+    }
+    // 전화번호형식 (000-0000-000) 표시
+    function id3(){
+        const id1 = document.getElementById("id1").value;
+        const exp = /^(?=.*[\d]{3}-)(?=.*[\d]{4}-)(?=.*[\d]{4})$/
+        if(id1.match(exp)){
+            console.log("일치")
+        }else{
+            console.log("불일치")
+        }
+    }
+
+
+</script>
+</body>
+</html>
